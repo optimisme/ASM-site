@@ -2,7 +2,7 @@
     align-items: stretch;
     display: flex;
     justify-content: space-between;
-    margin: 64px 0;
+    margin: 64px 16px;
 }
   
 #programs .program {

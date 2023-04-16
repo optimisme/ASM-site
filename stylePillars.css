@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 64px 0;
-  }
+}
   
 #pillars .pillar {
     width: 45%;
@@ -10,6 +10,7 @@
 }
   
 #pillars .pillar h2 {
+    color: #0280cd;
     font-weight: bold;
 }
   

@@ -1,8 +1,12 @@
 #based {
     align-items: stretch;
+    background-color: #eee;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 64px;
+    width: 90%;
 }
 
 #based .global {

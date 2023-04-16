@@ -7,7 +7,7 @@
   
 #programs .program {
     background-color: #eee;
-    border-radius: 10px;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     padding: 20px;

@@ -19,6 +19,11 @@
     height: 100px;
 }
 
+#based .regions {
+    display: flex;
+    justify-content: center;
+}
+
 #based .regions img {
     height: 150px;
 }

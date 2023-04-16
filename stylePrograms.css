@@ -1,16 +1,21 @@
 #programs {
     align-items: stretch;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 64px 16px;
 }
   
 #programs .program {
+    background-color: #eee;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 20px;
     width: 25%;
+}
+
+#programs .program:nth-child(2) {
+    margin: 0 16px;
 }
 
 #programs .program h2 {
@@ -19,16 +24,10 @@
 }
 
 #programs .program p {
-    text-align: center;
+    text-align: left;
 }
 
-#programs .program:nth-child(2) {
-    background-color: #eee;
-    border-radius: 10px;
-    padding: 20px;
-}
-  
-#programs .program:nth-child(2) img {
+#programs .program img {
     height: auto;
     display: block;
     margin: 20px auto;

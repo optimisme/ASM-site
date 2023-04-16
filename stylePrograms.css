@@ -1,9 +1,14 @@
 #programs {
+    align-items: stretch;
     display: flex;
     justify-content: space-between;
-  }
+    margin: 64px 0;
+}
   
 #programs .program {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 20px;
     width: 25%;
 }

@@ -1,6 +1,7 @@
 #pillars {
     display: flex;
     flex-wrap: wrap;
+    margin: 64px 0;
   }
   
 #pillars .pillar {

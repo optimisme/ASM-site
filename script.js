@@ -16,8 +16,6 @@ function init () {
     prevButton = document.querySelector('.carousel-button-prev');
     nextButton = document.querySelector('.carousel-button-next');
 
-    window.addEventListener("scroll", scrollHandler);
-
     initLinksTopPosition();
 }
 

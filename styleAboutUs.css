@@ -8,16 +8,17 @@
 #aboutUs div {
     align-items: center;
     display: flex;
+    height: 350px;
     width: 49%;
 }
 
 #aboutUs .pictures {
     border-radius: 16px;
-    height: 300px;
+    height: calc(100% - 16px);
     justify-content: center;
     overflow: hidden;
     padding: 0 32px;
-    width: 400px;
+    width: 100%;
 }
 
 #aboutUs .pictures img {

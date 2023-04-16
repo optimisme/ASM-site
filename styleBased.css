@@ -24,20 +24,22 @@
 }
 
 #based .detail {
-    align-items: center;
     display: flex;
     justify-content: center;
 }
 
 #based .text {
-    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+#based .text h2 {
+    color: #0280cd;
+}
+
 #based .text p {
-    padding: 8px;
+    padding: 0;
     text-align: left;
 }
 

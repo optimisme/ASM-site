@@ -6,7 +6,6 @@
     flex-direction: row;
     justify-content: space-around;
     margin: 64px auto;
-    max-width: 800px;
 }
 
 #based .global {

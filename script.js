@@ -21,17 +21,6 @@ function init () {
     initLinksTopPosition();
 }
 
-function scrollHandler () {
-    let diff = parseInt(window.pageYOffset - header.offsetTop);
-    if (diff === 0) {
-        console.log("shadow")
-        header.classList.add('shadow');
-    } else {
-        console.log("no shadow")
-        header.classList.remove('shadow');
-    }
-}
-
 function initLinksTopPosition () {
 
     let links = document.querySelectorAll('a[href^="#"]')

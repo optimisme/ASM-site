@@ -4,8 +4,16 @@
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 64px auto;
+    overflow: hidden;
+}
+
+#based .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 32px;
 }
 
 #based .global {
@@ -30,13 +38,6 @@
 #based .detail {
     display: flex;
     justify-content: center;
-}
-
-#based .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 16px;
 }
 
 #based .text h2 {

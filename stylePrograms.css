@@ -1,0 +1,31 @@
+#programs {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+#programs .program {
+    padding: 20px;
+    width: 25%;
+}
+
+#programs .program h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+#programs .program p {
+    text-align: center;
+}
+
+#programs .program:nth-child(2) {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 20px;
+}
+  
+#programs .program:nth-child(2) img {
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+}

@@ -1,0 +1,50 @@
+#based {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#based .global {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 20%;
+}
+
+#based .world img {
+    height: 100px;
+}
+
+#based .regions img {
+    height: 150px;
+}
+
+#based .detail {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#based .text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 20%;
+}
+
+#based .text p {
+    padding: 8px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    #based {
+        flex-direction: column;
+    }
+    .africaDetail,
+    .global {
+        margin: 16px;
+    }
+}

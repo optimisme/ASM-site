@@ -2,7 +2,7 @@
     align-items: stretch;
     display: flex;
     justify-content: center;
-    margin: 64px 16px;
+    margin: 64px auto;
 }
   
 #programs .program {

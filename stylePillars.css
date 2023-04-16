@@ -1,11 +1,12 @@
 #pillars {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     margin: 64px 0;
 }
   
 #pillars .pillar {
-    width: 45%;
+    width: 35%;
     padding: 20px;
 }
   

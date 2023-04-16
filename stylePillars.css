@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 64px 0;
+    margin: 48px 0;
 }
   
 #pillars .pillar {

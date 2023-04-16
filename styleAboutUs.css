@@ -8,21 +8,25 @@
 #aboutUs div {
     align-items: center;
     display: flex;
-    height: 350px;
+    height: 250px;
     width: 49%;
+}
+
+#aboutUs .picturesBox {
+    border-radius: 16px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.20), 0px 2px 17px 0px rgba(0,0,0,0.20);
+    overflow: hidden;
+    padding: 0 32px;
 }
 
 #aboutUs .pictures {
     border-radius: 16px;
-    height: calc(100% - 16px);
-    justify-content: center;
     overflow: hidden;
     padding: 0 32px;
-    width: 100%;
 }
 
-#aboutUs .pictures img {
-    height: 200px;
+#aboutUs .pictures .picturesList img {
+    height: 100%;
     margin: 16px 0;
 }
 

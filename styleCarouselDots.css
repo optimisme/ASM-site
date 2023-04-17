@@ -5,20 +5,77 @@
 */
 
 .carouselDots { 
-    border-radius: 16px;
-    box-shadow: inset 0 5px 10px 0 rgba(0,0,0,0.20), inset 0px 2px 17px 0px rgba(0,0,0,0.20);
+    height: 100%;
     position: relative;
-    overflow: hidden;
 }
 
 .carouselDots .contents {
+    border-radius: 16px;
+    box-shadow: inset 0 5px 10px 0 rgba(0,0,0,0.20), inset 0px 2px 17px 0px rgba(0,0,0,0.20);
     display: flex;
-    position: relative;
     flex-direction: row;
-    z-index: -10;
+    height: calc(100% - 24px);
+    overflow: hidden;
+    z-index: 1;
 }
 
-.carouselDots .contents > * {
+.carouselDots .content { 
+    background-color: lightgrey;
+    box-sizing: border-box;
+    display: flex;
     height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.carouselDots .content .image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.carouselDots .content p {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #fff;
+    font-size: 1.2em;
+    left: 0;
+    line-height: 1.5;
+    margin: 0;
+    padding: 16px 64px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    z-index: 1;
+}
+
+.carouselDots .dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.carouselDots .dots .dot {
+    border: solid 2.5px lightgray;
+    border-radius: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 16px;
+    margin: 0 16px;
+    width: 16px;
+}
+
+.carouselDots .dots .dot:first-child {
+    background-color: lightgray;
 }

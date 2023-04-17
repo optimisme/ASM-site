@@ -1,5 +1,5 @@
 
-function setCarousel(ref, direction) {
+function setCarouselArrows(ref, direction) {
     let num = 0
     let obj = ref.parentNode.parentNode
     let refContents = obj.querySelector('.contents')

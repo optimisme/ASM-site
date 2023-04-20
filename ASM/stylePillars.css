@@ -1,0 +1,20 @@
+#pillars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 48px 0;
+}
+  
+#pillars .pillar {
+    width: 35%;
+    padding: 20px;
+}
+  
+#pillars .pillar h2 {
+    font-weight: bold;
+}
+  
+#pillars .pillar:nth-child(-n+2) {
+    margin-bottom: auto;
+}
+  

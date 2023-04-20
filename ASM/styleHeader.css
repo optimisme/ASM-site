@@ -1,0 +1,85 @@
+
+#header {
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    backdrop-filter: blur(10px) saturate(180%);
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+#header .box {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .box .title h1 {
+    animation: titleShine 15s linear infinite;
+    background: linear-gradient(45deg, goldenrod, rgb(234, 184, 58), #f5e473, goldenrod);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.25em;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    #header .box .title h1 { 
+        font-size: 18px;
+    }
+}
+
+#header .box .title h3 {
+    color: rgb(11, 48, 88);
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    #header .box .title h3 { 
+        font-size: 14px;
+    }
+}
+
+#header .box .logo {
+    height: 95px;
+}
+
+@media only screen and (max-width: 768px) {
+    #header .box .logo { 
+        height: 50px;
+    }
+}
+
+@keyframes titleShine {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}
+
+#header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(11, 48, 88);
+    padding: 16px;
+}
+
+#header .menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 16px;
+    font-weight: lighter;
+}
+
+#header .menu a:first-child {
+    margin-left: 16px;
+}
+
+#header .menu a:last-child {
+    margin-left: 16px;
+}

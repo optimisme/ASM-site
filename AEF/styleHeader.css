@@ -1,0 +1,47 @@
+.headerBackground {
+    background-color: rgba(255, 255, 255, 0.65);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    backdrop-filter: blur(10px) saturate(180%);
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+header img {
+    height: 50px;
+}
+
+header h1 {
+    animation: titleShine 15s linear infinite;
+    background: linear-gradient(45deg, goldenrod, rgb(234, 184, 58), #f5e473, goldenrod);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.25em;
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.15em;
+        max-width: 50%;
+        text-align: right;
+    }
+}
+
+@keyframes titleShine {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}

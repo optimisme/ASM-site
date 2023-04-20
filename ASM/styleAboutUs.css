@@ -1,0 +1,33 @@
+#aboutUs {
+    align-items: stretch;
+    display: flex;
+    margin: 48px auto;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+    #aboutUs { 
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+}
+
+#aboutUs > div {
+    height: 250px;
+    width: 49%;
+}
+
+@media only screen and (max-width: 768px) {
+    #aboutUs > div { 
+        width: calc(100% - 16px);
+    }
+}
+
+#aboutUs .texts {
+    align-items: center;
+    display: flex;
+    padding: 0 32px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}

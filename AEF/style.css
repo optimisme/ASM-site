@@ -1,0 +1,35 @@
+body {
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9em;
+    margin: 0;
+    user-select: none;
+}
+
+.autocenter {
+    margin: 0 auto;
+    width: calc(100% - 32px);
+    max-width: 1024px;
+}
+
+a {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+/*
+h2 {
+    font-weight: lighter;
+    font-size: 1.5em;
+}
+*/
+

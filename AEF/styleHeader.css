@@ -16,6 +16,7 @@ header {
 
 header img {
     height: 50px;
+    transform: scale(1.35);
 }
 
 header h1 {

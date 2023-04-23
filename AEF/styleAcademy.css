@@ -85,7 +85,7 @@
 .academy .philosophie .containerImage img {
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
     border-radius: 16px;
-    filter: saturate(1.5);
+    filter: saturate(1.5) saturate(1.5) hue-rotate(332deg);
     object-fit: cover;
     overflow: hidden;
     width: 90%;
@@ -195,6 +195,21 @@
     object-fit: cover;
     overflow: hidden;
     width: 300px;
+}
+
+.academy .containerAnalysis {
+    display: flex;
+    justify-content: center;
+}
+
+.academy .containerAnalysis img {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
+    border-radius: 16px;
+    filter: saturate(1.5);
+    max-height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+    width: 50%;
 }
 
 .academy .spanishMethodology {
@@ -315,6 +330,7 @@
     filter: saturate(1.5);
     max-height: 250px;
     object-fit: cover;
+    object-position: top;
     overflow: hidden;
     width: 90%;
 }
@@ -377,6 +393,7 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 16px;
+    max-width: 50%;
 }
 
 .academy .coaches img {

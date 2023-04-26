@@ -1,0 +1,19 @@
+.flags {
+    align-items: stretch;
+    display: flex;
+    height: 20px;
+    width: 100%;
+}
+
+.flag {
+    background-repeat: repeat-x;
+    width: 50%;
+}
+
+.flagCI {
+    background-image: url("./images/flagCI.svg");
+}
+
+.flagSP {
+    background-image: url("./images/flagSP.svg");
+}

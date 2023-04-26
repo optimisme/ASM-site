@@ -28,6 +28,12 @@
     font-size: 2.5em;
 }
 
+@media only screen and (max-width: 768px) {
+    .intro h1 {
+        font-size: 1.5em;
+    }
+}
+
 .intro p {
     font-size: 1.25em;
     margin: 0;

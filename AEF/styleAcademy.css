@@ -336,7 +336,7 @@
     filter: saturate(1.5);
     max-height: 250px;
     object-fit: cover;
-    object-position: top;
+    /* object-position: top; */
     overflow: hidden;
     width: 90%;
 }

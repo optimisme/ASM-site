@@ -1,0 +1,27 @@
+@import url("shadows/common.css");
+
+:host {
+    background-color: white;
+    display: block;
+}
+
+.root {
+    align-items: stretch;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.root .text {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.root .signature {
+    color: rgb(107, 107, 107);
+    text-align: right;
+    margin-top: 0;
+}

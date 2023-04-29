@@ -1,0 +1,22 @@
+@import url("shadows/common.css");
+
+:host {
+    background-color: #443B24;
+    display: block;
+}
+
+.root {
+    padding-top: 16px;
+}
+
+.root h1 {
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .root h1 {
+        font-size: 1.75em;
+    }
+}

@@ -1,0 +1,59 @@
+@import url("shadows/common.css");
+
+:host {
+    background-color: #443B24;
+    display: block;
+}
+
+.root {
+    padding-top: 16px;
+}
+
+.content {
+    align-items: stretch;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+}
+
+.content .text {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    justify-content: center;
+    padding: 16px 32px;
+    text-align: center;
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .content .text {
+        font-size: 1em;
+        width: 100%;
+    }
+}
+
+.content img {
+    /* filter: saturate(1.5) hue-rotate(-30deg); */
+    filter: saturate(1.5);
+    height: 300px;
+    object-fit: cover;
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .content img {
+        width: 100%;
+    }
+}

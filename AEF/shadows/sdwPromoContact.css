@@ -1,0 +1,51 @@
+@import url("shadows/common.css");
+
+:host {
+    background-color: #443B24;
+    display: block;
+    padding: 16px 0;
+}
+
+.root {
+    align-items: center;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    overflow: hidden;
+    padding: 16px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .root {
+        font-size: 0.9em;
+    }
+}
+
+.root .row {
+    display: flex;
+    margin: 8px 0;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .root .row {
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+.root .row .field {
+    box-sizing: border-box;
+    color: gray;
+    padding: 0 2px;
+    text-align: right;
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .root .row .field {
+        text-align: left;
+    }
+}

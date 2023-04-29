@@ -1,5 +1,8 @@
-.flags {
-    align-items: stretch;
+:host {
+    display: block;
+}
+
+.root {
     display: flex;
     height: 20px;
     width: 100%;
@@ -11,9 +14,9 @@
 }
 
 .flagCI {
-    background-image: url("./images/flagCI.svg");
+    background-image: url("images/flagCI.svg");
 }
 
 .flagSP {
-    background-image: url("./images/flagSP.svg");
+    background-image: url("images/flagSP.svg");
 }

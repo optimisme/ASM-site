@@ -1,0 +1,19 @@
+.autocenter {
+    margin: 0 auto;
+    width: calc(100% - 32px);
+    max-width: 1024px;
+}
+
+a {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #0280cd;
+    text-decoration: none;
+}

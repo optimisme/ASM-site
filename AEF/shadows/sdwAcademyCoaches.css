@@ -1,0 +1,55 @@
+@import url("shadows/common.css");
+
+:host {
+    background-color: white;
+    display: block;
+}
+
+.root {
+    align-items: stretch;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .root {
+        flex-direction: column;
+    }
+}
+
+.root p {
+    margin: 8px 0;
+}
+
+.root .coach {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    padding: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .root .coach {
+        max-width: 100%;
+    }
+}
+
+.root .coach img {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    object-fit: cover;
+    height: 150px;
+    margin-bottom: 16px;
+    max-width: 100px;
+}
+
+.root .coach .name {
+    font-weight: bold;
+    margin: 0;
+}

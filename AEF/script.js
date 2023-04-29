@@ -7,18 +7,21 @@ var nextButton = null;
 var currentSlide = 0;
 
 window.addEventListener("load", init)
+
 function init () {
+/*
+    header = document.querySelector('#header')
 
-    header = document.querySelector('#header');
+    carousel = document.querySelector('.about-us-carousel')
+    slides = Array.from(document.querySelectorAll('.about-us-slide'))
+    prevButton = document.querySelector('.carousel-button-prev')
+    nextButton = document.querySelector('.carousel-button-next')
 
-    carousel = document.querySelector('.about-us-carousel');
-    slides = Array.from(document.querySelectorAll('.about-us-slide'));
-    prevButton = document.querySelector('.carousel-button-prev');
-    nextButton = document.querySelector('.carousel-button-next');
-
-    initLinksTopPosition();
+    initLinksTopPosition();*/
 }
 
+
+/*
 function initLinksTopPosition () {
 
     let links = document.querySelectorAll('a[href^="#"]')
@@ -37,5 +40,4 @@ function initLinksTopPosition () {
             }
         })
     })
-
-}
+}*/

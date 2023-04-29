@@ -1,25 +1,28 @@
-.headerBackground {
+@import url("shadows/common.css");
+
+:host {
     background-color: rgba(255, 255, 255, 0.65);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     backdrop-filter: blur(10px) saturate(180%);
+    display: block;
     position: sticky;
     top: 0;
     z-index: 10000;
 }
 
-header {
+.root {
     align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 16px 0;
 }
 
-header img {
+img {
     height: 50px;
     transform: scale(1.35);
 }
 
-header h1 {
+h1 {
     animation: titleShine 15s linear infinite;
     background: linear-gradient(45deg, goldenrod, rgb(234, 184, 58), #f5e473, goldenrod);
     -webkit-text-fill-color: transparent;
@@ -31,7 +34,7 @@ header h1 {
 }
 
 @media only screen and (max-width: 768px) {
-    header h1 {
+    h1 {
         font-size: 1.15em;
         max-width: 50%;
         text-align: right;

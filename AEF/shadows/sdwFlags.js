@@ -5,7 +5,6 @@ class sdwFlags extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = shadows[this.constructor.name].html
         this.elmRoot.classList.add("autocenter")
     }
 }

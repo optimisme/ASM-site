@@ -5,11 +5,11 @@ window.addEventListener("load", loadShadows)
 async function loadShadows () {
 
     let keys = Object.keys(shadows)
-        for (let cnt = 0; cnt < keys.length; cnt = cnt + 1) {
+    for (let cnt = 0; cnt < keys.length; cnt = cnt + 1) {
         let name = keys[cnt]
         let tag = shadows[name].tag
         eval(`customElements.define("${tag}", ${name})`)
-        }
+    }
 }
 
 class ShadowObject extends HTMLElement {
@@ -33,13 +33,16 @@ class ShadowObject extends HTMLElement {
         this.shadow.appendChild(this.elmRoot)
 
         this.elmStyle.textContent = shadows[this.constructor.name].css
+        if (shadows[this.constructor.name].html.length > 1) {
+            this.elmRoot.innerHTML = shadows[this.constructor.name].html
+        } else {
+            this.elmRoot.innerHTML = this.innerHTML
+        }
     
         this.load()
     }
 
-    async load () {
-        this.elmRoot.innerHTML = this.innerHTML
-    }
+    async load () { }
 }
 
 shadows["sdwAcademyCoaches"] = {
@@ -129,7 +132,6 @@ class sdwAcademyCoaches extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
 }
@@ -253,7 +255,6 @@ class sdwAcademyRow extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
 }
@@ -317,7 +318,6 @@ class sdwAcademySignature extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
 }
@@ -430,7 +430,6 @@ class sdwAcademyTalent extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
 }
@@ -489,7 +488,6 @@ class sdwAcademyTitle extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
 }
@@ -568,7 +566,6 @@ class sdwFeatured extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
 }
@@ -610,7 +607,6 @@ class sdwFlags extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = shadows[this.constructor.name].html
         this.elmRoot.classList.add("autocenter")
     }
 }
@@ -698,7 +694,6 @@ class sdwHeader extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
 }
@@ -786,7 +781,6 @@ class sdwPromoContact extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
 }
@@ -882,7 +876,6 @@ class sdwPromoRow extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = shadows[this.constructor.name].html
         this.elmRoot.querySelector(".content").innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
@@ -942,7 +935,6 @@ class sdwPromoTitle extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
 }

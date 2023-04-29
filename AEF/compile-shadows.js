@@ -11,7 +11,7 @@ async function compileShadows () {
 
     shadowsData += "var shadows = {}\n"
     shadowsData += addLoadShadows() + "\n"
-    shadowsData += "\n" + await addShadowObject() + "\n"
+    shadowsData += "\n" + await fs.readFile(`${path}/shadowObject.js`, { encoding: 'utf8' }) + "\n"
 
     for (let cnt = 0; cnt < shadows.length; cnt = cnt + 1) {
         shadowsData += "\n" + await getShadowData(shadows[cnt]) + "\n"
@@ -33,6 +33,21 @@ async function getShadows() {
     }
 
     return rst
+}
+
+function addLoadShadows () {
+    return `
+window.addEventListener("load", loadShadows)
+
+async function loadShadows () {
+
+    let keys = Object.keys(shadows)
+    for (let cnt = 0; cnt < keys.length; cnt = cnt + 1) {
+        let name = keys[cnt]
+        let tag = shadows[name].tag
+        eval(\`customElements.define("\${tag}", \${name})\`)
+    }
+}`
 }
 
 async function getShadowData (shadow) {
@@ -67,25 +82,6 @@ async function replaceImports(css) {
     }
   
     return css;
-}
-
-async function addShadowObject () {
-    return await fs.readFile(`${path}/shadowObject.js`, { encoding: 'utf8' })
-}
-
-function addLoadShadows () {
-    return `
-window.addEventListener("load", loadShadows)
-
-async function loadShadows () {
-
-    let keys = Object.keys(shadows)
-        for (let cnt = 0; cnt < keys.length; cnt = cnt + 1) {
-        let name = keys[cnt]
-        let tag = shadows[name].tag
-        eval(\`customElements.define("\${tag}", \${name})\`)
-        }
-}`
 }
 
 compileShadows();

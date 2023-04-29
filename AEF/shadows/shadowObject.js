@@ -19,11 +19,14 @@ class ShadowObject extends HTMLElement {
         this.shadow.appendChild(this.elmRoot)
 
         this.elmStyle.textContent = shadows[this.constructor.name].css
+        if (shadows[this.constructor.name].html.length > 1) {
+            this.elmRoot.innerHTML = shadows[this.constructor.name].html
+        } else {
+            this.elmRoot.innerHTML = this.innerHTML
+        }
     
         this.load()
     }
 
-    async load () {
-        this.elmRoot.innerHTML = this.innerHTML
-    }
+    async load () { }
 }

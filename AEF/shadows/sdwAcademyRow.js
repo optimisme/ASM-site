@@ -5,7 +5,6 @@ class sdwAcademyRow extends ShadowObject {
     }
 
     async load () {
-        this.elmRoot.innerHTML = this.innerHTML
         this.elmRoot.classList.add("autocenter")
     }
 }

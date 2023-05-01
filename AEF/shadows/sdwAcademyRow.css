@@ -85,3 +85,23 @@
     overflow: hidden;
     width: 300px;
 }
+
+.root .imageCarousel  {
+    box-sizing: border-box;
+    display: flex;
+    height: 300px;
+    padding: 16px 32px;
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .root .imageCarousel {
+        width: 100%;
+    }
+}
+
+.root .imageCarousel sdw-carousel-arrows {
+    border-radius: 16px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
+    overflow: hidden;
+}

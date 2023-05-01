@@ -243,6 +243,26 @@ a:visited {
     object-fit: cover;
     overflow: hidden;
     width: 300px;
+}
+
+.root .imageCarousel  {
+    box-sizing: border-box;
+    display: flex;
+    height: 300px;
+    padding: 16px 32px;
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .root .imageCarousel {
+        width: 100%;
+    }
+}
+
+.root .imageCarousel sdw-carousel-arrows {
+    border-radius: 16px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
+    overflow: hidden;
 }`,
 	html: `
 ` 
@@ -489,6 +509,193 @@ class sdwAcademyTitle extends ShadowObject {
 
     async load () {
         this.elmRoot.classList.add("autocenter")
+    }
+}
+
+shadows["sdwCarouselArrows"] = {
+	tag: "sdw-carousel-arrows",
+	css: `
+.autocenter {
+    margin: 0 auto;
+    width: calc(100% - 32px);
+    max-width: 1024px;
+}
+
+a {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #0280cd;
+    text-decoration: none;
+}
+
+:host {
+    width: 100%;
+}
+
+.root {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.contents { 
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: transform 250ms 0ms ease;
+}
+
+.content { 
+    background-color: lightgrey;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.content .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.content p {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #fff;
+    font-size: 1.2em;
+    left: 0;
+    line-height: 1.5;
+    margin: 0;
+    padding: 16px 64px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    z-index: 1;
+}
+
+.root .leftArrowBox { 
+    align-items: center;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform 250ms 0ms ease, opacity 250ms 0ms ease;
+    width: 50px;
+}
+
+.root .leftArrow { 
+    border-right: solid 8px white;
+    border-top: solid 8px white;
+    cursor: pointer;
+    height: 16px;
+    transform: rotate3d(0, 0, 1, 225deg);
+    width: 16px;
+}
+
+.root .rightArrowBox { 
+    align-items: center;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform 250ms 0ms ease, opacity 250ms 0ms ease;
+    width: 50px;
+}
+
+.root .rightArrow { 
+    border-right: solid 8px white;
+    border-top: solid 8px white;
+    cursor: pointer;
+    height: 16px;
+    transform: rotate3d(0, 0, 1, 45deg);
+    width: 16px;
+}`,
+	html: `
+<div class="contents" data-carousel="contents">
+
+</div>
+<div class="leftArrowBox">
+    <div class="leftArrow"></div>
+</div>
+<div class="rightArrowBox" data-carousel="rightArrow">
+    <div class="rightArrow"></div>
+</div>
+` 
+}
+
+class sdwCarouselArrows extends ShadowObject {
+    
+    constructor () {
+        super()
+    }
+
+    async load () {
+        this.elmRoot.querySelector(".contents").innerHTML = this.innerHTML
+        this.elmRoot.querySelector(".leftArrow").addEventListener('click', () => { this.setCarouselArrows('left') })
+        this.elmRoot.querySelector(".rightArrow").addEventListener('click', () => { this.setCarouselArrows('right') })
+    }
+
+    setCarouselArrows(direction) {
+
+        let num = 0
+        let refContents = this.elmRoot.querySelector('.contents')
+        let refLeftArrowBox = this.elmRoot.querySelector('.leftArrowBox')
+        let refRightArrowBox = this.elmRoot.querySelector('.rightArrowBox')
+        let numContents = (refContents.children.length - 1)
+    
+        if (refContents.style.transform != '') {
+            num = -1 * (parseInt((refContents.style.transform.replace('translateX(', '')).replace('%)', '')) / 100)
+        }
+        
+        if (direction == 'left') { num = num - 1; } else { num = num + 1; }
+        
+        if (num <= 0) { 
+            refLeftArrowBox.style.opacity = '0'
+            refLeftArrowBox.style.transform = 'scale3d(0, 0, 0)'
+            refLeftArrowBox.style.pointerEvents = 'none'
+        } else {
+            refLeftArrowBox.style.opacity = '1'
+            refLeftArrowBox.style.transform = 'scale3d(1, 1, 1)'
+            refLeftArrowBox.style.pointerEvents = 'initial'
+        }
+        if (num >= numContents) { 
+            refRightArrowBox.style.opacity = '0'
+            refRightArrowBox.style.transform = 'scale3d(0, 0, 0)'
+            refRightArrowBox.style.pointerEvents = 'none'
+        } else {
+            refRightArrowBox.style.opacity = '1'
+            refRightArrowBox.style.transform = 'scale3d(1, 1, 1)'
+            refRightArrowBox.style.pointerEvents = 'initial'
+        }
+    
+        refContents.style.transform = 'translateX(-' + (num * 100) + '%)'
     }
 }
 

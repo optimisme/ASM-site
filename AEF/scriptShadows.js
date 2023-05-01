@@ -200,7 +200,7 @@ a:visited {
     }
 }
 
-.root .containerImage {
+.containerImage {
     align-items: center;
     box-sizing: border-box;
     display: flex;
@@ -210,12 +210,12 @@ a:visited {
 }
 
 @media only screen and (max-width: 768px) {
-    .root .containerImage {
+    .containerImage {
         width: 100%;
     }
 }
 
-.root .containerImage img {
+.containerImage img {
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
     border-radius: 16px;
     filter: saturate(1.25);
@@ -225,7 +225,7 @@ a:visited {
     width: 100%;
 }
 
-.root .imageJoeur  {
+.imageJoeur  {
     align-items: center;
     box-sizing: border-box;
     display: flex;
@@ -234,18 +234,18 @@ a:visited {
 }
 
 @media only screen and (max-width: 768px) {
-    .root .imageJoeur {
+    .imageJoeur {
         width: 100%;
     }
 }
 
-.root .imageJoeur img {
+.imageJoeur img {
     object-fit: cover;
     overflow: hidden;
     width: 300px;
 }
 
-.root .imageCarousel  {
+.imageCarousel  {
     box-sizing: border-box;
     display: flex;
     height: 400px;
@@ -254,13 +254,13 @@ a:visited {
 }
 
 @media only screen and (max-width: 768px) {
-    .root .imageCarousel {
+    .imageCarousel {
         max-height: 300px;
         width: 100%;
     }
 }
 
-.root .imageCarousel sdw-carousel-arrows {
+.imageCarousel sdw-carousel-arrows {
     border-radius: 16px;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 2px 17px 0 rgba(0,0,0,0.2);
     overflow: hidden;
